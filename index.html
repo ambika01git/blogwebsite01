@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chika's Blog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background-color: #4b6cb7;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      padding: 2rem;
+    }
+    .blog-post {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chika's Thoughts</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main id="blog-posts"></main>
+
+  <footer>
+    <p>&copy; 2025 Chika's Blog</p>
+  </footer>
+
+  <script>
+    const posts = [
+      { title: "Welcome to My Blog!", content: "This is the first post. Excited to start sharing!" },
+      { title: "Code Adventures", content: "Today I optimized a debounce function. Geek joy!" }
+    ];
+
+    const container = document.getElementById('blog-posts');
+    posts.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.className = 'blog-post';
+      postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+      container.appendChild(postElement);
+    });
+  </script>
+</body>
+</html>
